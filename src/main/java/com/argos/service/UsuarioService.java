@@ -12,19 +12,24 @@ import java.util.Random;
 public class UsuarioService {
     @Autowired
     private UsuarioRepository usuarioRepository;
+
+    @Autowired
     private EmailService emailService;
 
     public Usuario saveUser(Usuario usuario) {
         return usuarioRepository.save(usuario);
     }
 
-    public void gerarToken(UsuarioRequest usuarioRequest) {
-        Usuario usuario = usuarioRepository
-                .findById(usuarioRequest.getId())
-                .orElseThrow();
+    public void criarUsuario(UsuarioRequest usuarioRequest) {
+        Usuario usuario = new Usuario();
 
         String token = gerarTokenAleatorio();
+        usuario.setCargo(usuarioRequest.getCargo());
+        usuario.setEmail(usuarioRequest.getEmail());
+        usuario.setEmpresa_id(usuarioRequest.getEmpresaId());
+        usuario.setGestor_id(usuarioRequest.getGestorId());
         usuario.setToken(token);
+
         usuarioRepository.save(usuario);
         emailService.enviarEmail(usuario, token);
     }

@@ -17,8 +17,11 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
-    @PostMapping("/token")
-    public void gerarToken(@RequestBody UsuarioRequest request) {
-        usuarioService.gerarToken(request);
+    @PostMapping("/criar-usuario")
+    public void criarUsuario(@RequestBody UsuarioRequest request) {
+        usuarioService.criarUsuario(request);
     }
+
+    // criar usuario
+    //
 }

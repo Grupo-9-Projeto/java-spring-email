@@ -14,7 +14,13 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
+
+    @Column(name = "empresa_id")
+    private Long empresa_id;
+
+    @Column(name = "gestor_id")
+    private Long gestor_id;
+
     private String email;
     private String cargo;
     private String token;
