@@ -51,6 +51,24 @@ com.argos
 
 Arquitetura em camadas clássica (Controller → Service → Repository), sem uso de DTO de saída (mapper) nem de camada de validação (Bean Validation) no momento.
 
+Cliente (Postman/Frontend)
+        │  HTTP POST
+        ▼
+┌─────────────────┐
+│   Controller     │  "porta de entrada" — recebe e devolve HTTP
+└────────┬─────────┘
+         │ chama
+         ▼
+┌─────────────────┐
+│    Service       │  "cérebro" — regra de negócio
+└────────┬─────────┘
+         │ usa
+    ┌────┴────┐
+    ▼         ▼
+┌────────┐ ┌─────────────┐
+│Repository│ │ EmailService│
+│ (MySQL) │ │   (SMTP)    │
+└────────┘ └─────────────┘
 ---
 
 ## 4. Modelo de dados
