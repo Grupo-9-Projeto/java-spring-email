@@ -174,7 +174,7 @@ import java.util.Properties;
                         Um administrador cadastrou o seu e-mail no
                         <strong>Sistema Argos</strong>.
                         Para realizar o seu cadastro e liberar o seu acesso
-                        à plataforma, utilize o token de verificação abaixo:
+                        à plataforma, utilize o token   de verificação abaixo:
                     </p>
 
                     <div class="token-box">
