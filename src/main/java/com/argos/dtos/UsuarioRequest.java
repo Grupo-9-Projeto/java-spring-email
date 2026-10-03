@@ -8,9 +8,6 @@ import lombok.Setter;
 @Setter
 public class UsuarioRequest {
 //    private Long id;
-    private String cargo;
     private String email;
-    private Long gestorId;
-    private Long empresaId;
 
 }

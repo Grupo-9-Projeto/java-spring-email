@@ -15,8 +15,8 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "empresa_id")
-    private Long empresa_id;
+    @Column(name = "fk_empresa_fornecedora")
+    private Long fk_empresa_fornecedora;
 
     @Column(name = "gestor_id")
     private Long gestor_id;
