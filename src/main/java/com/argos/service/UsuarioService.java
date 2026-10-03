@@ -24,10 +24,13 @@ public class UsuarioService {
         Usuario usuario = new Usuario();
 
         String token = gerarTokenAleatorio();
-        usuario.setCargo(usuarioRequest.getCargo());
+
+        usuario.setCargo("gerente");
         usuario.setEmail(usuarioRequest.getEmail());
-        usuario.setEmpresa_id(usuarioRequest.getEmpresaId());
-        usuario.setGestor_id(usuarioRequest.getGestorId());
+
+        usuario.setFk_empresa_fornecedora(1L);
+        usuario.setGestor_id(1L);
+
         usuario.setToken(token);
 
         usuarioRepository.save(usuario);
