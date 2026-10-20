@@ -25,11 +25,11 @@ public class UsuarioService {
 
         String token = gerarTokenAleatorio();
 
-        usuario.setCargo("gerente");
+        usuario.setCargo(usuarioRequest.getCargo());
         usuario.setEmail(usuarioRequest.getEmail());
 
         usuario.setFk_empresa_fornecedora(1L);
-        usuario.setGestor_id(1L);
+        usuario.setGestor_id(usuarioRequest.getGestor_id());
 
         usuario.setToken(token);
 
