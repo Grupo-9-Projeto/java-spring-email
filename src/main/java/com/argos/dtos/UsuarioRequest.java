@@ -9,5 +9,6 @@ import lombok.Setter;
 public class UsuarioRequest {
 //    private Long id;
     private String email;
-
+    private String cargo;
+    private Long gestor_id;
 }

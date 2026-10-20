@@ -22,6 +22,9 @@ public class Usuario {
     private Long gestor_id;
 
     private String email;
+
+    @Column(name = "cargo")
     private String cargo;
+
     private String token;
 }
