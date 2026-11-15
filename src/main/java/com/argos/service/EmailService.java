@@ -162,7 +162,7 @@ import java.util.Properties;
 
                 <div class="email-header">
                     <img
-                        src="https://raw.githubusercontent.com/Grupo-9-Projeto/site-institucional/main/src/assets/logos/Argos-logo_branco.png"
+                        src="https://raw.githubusercontent.com/Grupo-9-Projeto/site-institucional/refs/heads/main/src/assets/logos/Argos-logo_breto.png"
                         alt="Logo Argos"
                     >
                 </div>
